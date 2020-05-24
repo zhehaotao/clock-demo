@@ -1,0 +1,41 @@
+html{
+  background: #000000;
+  color: #8a8a8a;
+  font-size: 0.85rem;
+  overflow:hidden;
+}
+
+span{
+  display: block;
+  float: left;
+}
+
+.container{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin-top: -150px;
+  margin-left: -150px;
+}
+
+.container .timebox{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  left:0;
+  border-radius: 100%;
+  transition: all 1s;
+}
+
+.container .timebox span{
+  position: absolute;
+  left:50%;
+  top:50%;
+  width: 40px;
+  height: 18px;
+  margin-top: -9px;
+  margin-left: -20px;
+}
