@@ -5,57 +5,62 @@ let minutes = document.getElementById('minute');
 let seconds = document.getElementById('second');
 
 initMonths = () => {
+  var html = '';
   for (let i = 0; i <= 11; i++) {
     if (i < 9) {
-      months.innerHTML += `<span>0${i + 1}月<span>`;
+      html += `<span style='transform:rotate(${30 * i}deg) translateX(50px)'>0${i + 1}月</span>`;
     } else {
-      months.innerHTML += `<span>${i + 1}月<span>`;
+      html += `<span style='transform:rotate(${30 * i}deg) translateX(50px)'>${i + 1}月</span>`;
     }
-    months.children[i].style.transform=`rotate(${30 * i}deg) translateX(50px)` ;
+    months.innerHTML = html;
   }
 }
 
 initDates = () => {
+  var html = '';
   for (let i = 0; i <= 30; i++) {
     if (i < 9) {
-      dates.innerHTML += `<span>0${i + 1}日<span>`;
+      html += `<span style='transform:rotate(${360 / 31 * i}deg) translateX(100px)'>0${i + 1}日</span>`;
     } else {
-      dates.innerHTML += `<span>${i + 1}日<span>`;
+      html += `<span style='transform:rotate(${360 / 31 * i}deg) translateX(100px)'>${i + 1}日</span>`;
     }
-    dates.children[i].style.transform=`rotate(${360 / 31 * i}deg) translateX(100px)` ;
+    dates.innerHTML = html;
   }
 }
 
 initHours = () => {
+  var html = '';
   for (let i = 0; i <= 23; i++) {
     if (i <= 9) {
-      hours.innerHTML += `<span>0${i}时<span>`;
+      html += `<span style='transform:rotate(${15 * i}deg) translateX(150px)'>0${i}时</span>`;
     } else {
-      hours.innerHTML += `<span>${i}时<span>`;
+      html += `<span style='transform:rotate(${15 * i}deg) translateX(150px)'>${i}时</span>`;
     }
-    hours.children[i].style.transform = `rotate(${15 * i}deg) translateX(150px)`;
+    hours.innerHTML = html;
   }
 }
 
 initMinutes = () => {
+  var html = '';
   for (let i = 0; i <= 59; i++) {
     if (i <= 9) {
-      minutes.innerHTML += `<span>0${i}分<span>`;
+      html += `<span style='transform:rotate(${6 * i}deg) translateX(200px)'>0${i}分</span>`;
     } else {
-      minutes.innerHTML += `<span>${i}分<span>`;
+      html += `<span style='transform:rotate(${6 * i}deg) translateX(200px)'>${i}分</span>`;
     }
-    minutes.children[i].style.transform=`rotate(${6*i}deg) translateX(200px)`;
+    minutes.innerHTML = html;
   }
 }
 
 initSeconds = () => {
+  var html = '';
   for (let i = 0; i <= 59; i++) {
     if (i <= 9) {
-      seconds.innerHTML += `<span>0${i}秒<span>`;
+      html += `<span style='transform:rotate(${6 * i}deg) translateX(250px)'>0${i}秒</span>`;
     } else {
-      seconds.innerHTML += `<span>${i}秒<span>`;
+      html += `<span style='transform:rotate(${6 * i}deg) translateX(250px)'>${i}秒</span>`;
     }
-    seconds.children[i].style.transform=`rotate(${6*i}deg) translateX(250px)` ;
+    seconds.innerHTML = html;
   }
 }
 
